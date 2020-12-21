@@ -1,0 +1,21 @@
+﻿@model Bookly.Models.Book
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Error</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+       You cannot edit or delete a book that is not owned by you
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
